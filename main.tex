@@ -1,0 +1,68 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0,0.45,0}
+\definecolor{codegray}{rgb}{0.4,0.4,0.4}
+\definecolor{codepurple}{rgb}{0.5,0,0.5}
+
+\lstdefinestyle{cpp}{
+    language=C++,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{codegreen},
+    stringstyle=\color{codepurple},
+    numbers=left,
+    numberstyle=\tiny\color{codegray},
+    stepnumber=1,
+    numbersep=8pt,
+    breaklines=true,
+    breakatwhitespace=false,
+    keepspaces=true,
+    showstringspaces=false,
+    tabsize=4,
+    frame=single
+}
+
+\title{B-Tree Implementation in C++}
+\author{Advanced Data Structures}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+
+This document collects the B-Tree implementation and its example program.
+The C++ source files remain separate so the project can still be built and
+maintained normally. Compile this document from the repository root.
+
+\section{Node Types}
+
+\subsection{\texttt{include/Node.h}}
+\lstinputlisting[style=cpp,caption={Base node}]{include/Node.h}
+
+\subsection{\texttt{include/LeafNode.h}}
+\lstinputlisting[style=cpp,caption={Leaf node}]{include/LeafNode.h}
+
+\subsection{\texttt{include/InternalNode.h}}
+\lstinputlisting[style=cpp,caption={Internal node}]{include/InternalNode.h}
+
+\section{B-Tree}
+
+\subsection{\texttt{include/BTree.h}}
+\lstinputlisting[style=cpp,caption={B-Tree declaration}]{include/BTree.h}
+
+\subsection{\texttt{include/BTree.tpp}}
+\lstinputlisting[style=cpp,caption={B-Tree template implementation}]{include/BTree.tpp}
+
+\section{Example Program}
+
+\subsection{\texttt{src/main.cpp}}
+\lstinputlisting[style=cpp,caption={Example program and basic operation checks}]{src/main.cpp}
+
+\end{document}

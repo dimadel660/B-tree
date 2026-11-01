@@ -6,7 +6,7 @@ struct Node
 {
     bool is_leaf;
     int num_keys;
-    Type key[Ord]; // each node can have a temporary overflow
+    Type key[Ord]; 
 
     Node(bool leaf)
         : is_leaf(leaf), num_keys(0)

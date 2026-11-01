@@ -6,15 +6,13 @@
 template <typename Type, int Ord>
 struct InternalNode : public Node<Type, Ord>
 {
-    Node<Type, Ord> *child[Ord + 1];
+    Node<Type, Ord>* child[Ord+1];
 
     InternalNode()
         : Node<Type, Ord>(false)
     {
-        for (int i = 0; i < Ord + 1; ++i)
-        {
-            child[i] = nullptr;
-        }
+        for(int i=0; i<Ord+1; ++i)
+            child[i]=nullptr;
     }
 };
 
